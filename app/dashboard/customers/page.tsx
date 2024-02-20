@@ -1,3 +1,9 @@
+import { Metadata } from 'next';
+
+const metadata: Metadata = {
+  title: 'Customers',
+};
+
 function CustomersPage() {
   return (
     <div>
@@ -6,4 +12,5 @@ function CustomersPage() {
   );
 }
 
+export { metadata };
 export default CustomersPage;

@@ -6,6 +6,7 @@ import { lusitana } from '@/app/ui/fonts';
 import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
 import { Suspense } from 'react';
 import { fetchInvoicesPages } from '@/app/lib/data';
+import { Metadata } from 'next';
 
 interface InvoicesPageProps {
   searchParams?: {
@@ -13,6 +14,10 @@ interface InvoicesPageProps {
     page?: string;
   };
 }
+
+const metadata: Metadata = {
+  title: 'Invoices',
+};
 
 async function InvoicesPage({ searchParams }: InvoicesPageProps) {
   const query = searchParams?.query || '';
@@ -38,4 +43,5 @@ async function InvoicesPage({ searchParams }: InvoicesPageProps) {
   );
 }
 
+export { metadata };
 export default InvoicesPage;

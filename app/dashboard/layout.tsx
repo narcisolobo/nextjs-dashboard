@@ -1,5 +1,10 @@
 import SideNav from '@/app/ui/dashboard/sidenav';
+import { Metadata } from 'next';
 import { ReactNode } from 'react';
+
+const metadata: Metadata = {
+  title: 'Dashboard',
+};
 
 interface Props {
   children: ReactNode;
@@ -16,4 +21,5 @@ function DashboardLayout({ children }: Props) {
   );
 }
 
+export { metadata };
 export default DashboardLayout;

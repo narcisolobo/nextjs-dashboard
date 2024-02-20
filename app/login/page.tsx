@@ -1,5 +1,10 @@
 import AcmeLogo from '@/app/ui/acme-logo';
 import LoginForm from '@/app/ui/login-form';
+import { Metadata } from 'next';
+
+const metadata: Metadata = {
+  title: 'Login',
+};
 
 function LoginPage() {
   return (
@@ -16,4 +21,5 @@ function LoginPage() {
   );
 }
 
+export { metadata };
 export default LoginPage;
